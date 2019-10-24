@@ -16,7 +16,8 @@ function getPosts(){
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((res) => res.json())
     .then((data) => {
-        let output = '<h2>Posts</h2>';
+        console.log(data)
+        let output = '<h2>API data</h2>';
         data.forEach(function(post){
             output += `
              <div>
@@ -25,6 +26,6 @@ function getPosts(){
              </div>
             `;
         });
-        document.getElementById('output').innerHTML = data;
+        document.getElementById('output').innerHTML = output;
     })
 }
