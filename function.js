@@ -1,15 +1,3 @@
-document.getElementById('getText').addEventListener('click', getText);
-
-
-function getText(){
-    fetch('sample.txt')
-    .then((res) => res.text())
-    .then((data) => {
-        document.getElementById('output').innerHTML = data;
-    })
-}
-
-
 
 getPosts();
 function getPosts(){
@@ -21,7 +9,7 @@ function getPosts(){
         data.forEach(function(post){
             output += `
              <div>
-                 <h3>${post.id}</h3>
+                 <p>${post.id}</p>
                  <p>${post.title}</p>
              </div>
             `;
