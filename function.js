@@ -1,5 +1,6 @@
 document.getElementById('getText').addEventListener('click', getText);
 
+
 function getText(){
     fetch('sample.txt')
     .then((res) => res.text())
@@ -9,15 +10,21 @@ function getText(){
 }
 
 
-// function getText(){
-//     fetch('sample.txt')
-//     .then(function(res){
-//         console.log ("pass results");
-//         return res.text();
-//     })
-//     .then(function(data){
-//         console.log ("pass data");
-//         console.log(data)
-//     })
-// }
 
+getPosts();
+function getPosts(){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => res.json())
+    .then((data) => {
+        let output = '<h2>Posts</h2>';
+        data.forEach(function(post){
+            output += `
+             <div>
+                 <h3>${post.id}</h3>
+                 <p>${post.title}</p>
+             </div>
+            `;
+        });
+        document.getElementById('output').innerHTML = data;
+    })
+}
