@@ -17,3 +17,4 @@ function getPosts(){
         document.getElementById('output').innerHTML = output;
     })
 }
+
