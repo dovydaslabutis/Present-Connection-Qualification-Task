@@ -1,4 +1,4 @@
-document.getElementById('addPost').addEventListener('sumbit', addPost);
+
 
 getPosts();
 function getPosts(){
@@ -21,7 +21,7 @@ function getPosts(){
 }
 
 // This function will add new record after pressing submit
-
+document.getElementById('addPost').addEventListener('submit', addPost);
 function addPost(e){
     e.preventDefault();
     
