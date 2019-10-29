@@ -4,17 +4,16 @@ function getPosts(){
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
-        let output = '<h2>ID title</h2>';
+        let output = '';
         data.forEach(function(post){
             output += `
-             <div>
+             
                  <p>${post.id}</p>
                  <p>${post.title}</p>
-             </div>
+             
             `;
         });
         document.getElementById('output').innerHTML = output;
     })
 }
-
 
