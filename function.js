@@ -6,12 +6,7 @@ function getPosts(){
         console.log(data)
         let output = '';
         data.forEach(function(post){
-            output += `
-             
-                 <p>${post.id}</p>
-                 <p>${post.title}</p>
-             
-            `;
+            output += `<p>${post.id} ${post.title}</p>`;
         });
         document.getElementById('output').innerHTML = output;
     })
