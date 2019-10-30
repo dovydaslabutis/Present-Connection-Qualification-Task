@@ -1,3 +1,6 @@
+
+
+
 getPosts();
 function getPosts(){
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -10,6 +13,15 @@ function getPosts(){
         });
         document.getElementById('output').innerHTML = output;
     })
+}
+
+// create even listener
+document.getElementById('output').addEventListener ('click', loadData)
+
+
+
+function loadData(){
+    
 }
 
 
