@@ -1,6 +1,4 @@
 
-
-
 getPosts();
 function getPosts(){
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -15,10 +13,9 @@ function getPosts(){
     })
 }
 
+
 // create even listener
 document.getElementById('output').addEventListener ('click', loadData)
-
-
 
 function loadData(){
     
